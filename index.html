@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>K-T metoda</title>
+</head>
+
+<body>
+    <form>
+        <p>
+            <input type="button" value="Dodaj alternativo" onclick="dodajKolono()" />
+            <input type="button" value="Dodaj parameter" onclick="dodajVrstico()" />
+        </p>
+        <table id="tabela" border="1">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Utež</th>
+                    <th><input type="text" value="Alternativa 1"></th>
+                    <th><input type="text" value="Alternativa 2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <input type="button" value="Potrdi" onclick="pridobitevPodatkov()" />
+        </p>
+    </form>
+    <input type="button" value="Primerjava alternativ" onclick="grafAlternativ()" />
+    <input type="button" value="Uteži parametrov" onclick="grafUtezi()" />
+    <p>Vnesi številko parametra:</p><input type="number" id="index">
+    <input type="button" value="Analiza občutljivosti posameznega parametra" onclick="grafObcutljivosti()" />
+    <div id="graf1" style="width:100%;max-width:700px"></div>
+    <div id="graf2" style="width:100%;max-width:700px"></div>
+    <canvas id="graf3" style="width:100%;max-width:700px"></canvas>
+
+    <script src="tabela.js"></script>
+</body>
+
+</html>
